@@ -1,0 +1,12 @@
+local url = "https://raw.githubusercontent.com/xenith1121/xenith/main/scripts/myscript.lua"
+
+local response = request({
+    Url = url,
+    Method = "GET"
+})
+
+if response.Success then
+    loadstring(response.Body)()
+else
+    warn("Failed to load script from " .. url)
+end
