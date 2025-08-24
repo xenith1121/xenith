@@ -16,13 +16,13 @@ local request 		= request or http_request;
 local loadstring 	= loadstring;
 
 if (type(messagebox) ~= 'function') then
-	return localPlayer:Kick('[amongus.hook] missing alias ( messagebox ) - unsupported executor');
+	return localPlayer:Kick('[xenith.com] missing alias ( messagebox ) - unsupported executor');
 end;
 
 local protectedMessagebox = function(body, title, id)
 	local success, output = pcall(messagebox, body, title, id);
 	if (not success) then
-		localPlayer:Kick(`[amongus.hook] messagebox_error - {body}`);
+		localPlayer:Kick(`[xenith.com] messagebox_error - {body}`);
 		task.wait(9e9);
 		return;
 	end;
